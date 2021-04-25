@@ -236,15 +236,63 @@ function Main() {
                                 </div>
                                 <div className="item-5-notif">
                                     <div className="item-5-notif-item">
-                                    <div className="circle circle-c-1"></div>
-                                    <div className="item-5-notif-img">
-                                    </div>    
-                                    <div className="item-5-notif-text">
-                                        <div className="item-5-notif-text1"></div>
-                                        <div className="item-5-notif-text2"></div>
+                                        <div className="item-5-notif-circle">
 
+                                        <div className="circle circle-c-1"></div>
+                                        </div>
+                                        <div className="item-5-notif-img">
+                                            <img src={User1} />
+                                        </div>
+                                        <div className="item-5-notif-text">
+                                            <div className="item-5-notif-text1">
+                                                <p>The Quick Brown Fox Jumps</p>
+                                            </div>
+                                            <div className="item-5-notif-text2">
+                                                <p>Lorem Ipsum is simply dummy text of…</p>
+                                            </div>
+
+                                        </div>
                                     </div>
-                                    </div>     
+                                </div>
+                                <div className="item-5-notif">
+                                    <div className="item-5-notif-item">
+                                        <div className="item-5-notif-circle">
+
+                                        <div className="circle circle-c-2"></div>
+                                        </div>
+                                        <div className="item-5-notif-img">
+                                            <img src={User1} />
+                                        </div>
+                                        <div className="item-5-notif-text">
+                                            <div className="item-5-notif-text1">
+                                                <p>Over The Lazy Dog</p>
+                                            </div>
+                                            <div className="item-5-notif-text2">
+                                                <p>Lorem Ipsum is simply dummy text of…</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="item-5-notif">
+                                    <div className="item-5-notif-item">
+                                        <div className="item-5-notif-circle">
+
+                                        <div className="circle circle-c-3"></div>
+                                        </div>
+                                        <div className="item-5-notif-img">
+                                            <img src={User1} />
+                                        </div>
+                                        <div className="item-5-notif-text">
+                                            <div className="item-5-notif-text1">
+                                                <p>The Quick Brown Fox</p>
+                                            </div>
+                                            <div className="item-5-notif-text2">
+                                                <p>Lorem Ipsum is simply dummy text of…</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>
