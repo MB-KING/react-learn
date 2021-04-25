@@ -1,5 +1,5 @@
 import React from "react";
-import { Doughnut } from 'react-chartjs-2';
+import { Doughnut, Bar } from 'react-chartjs-2';
 import 'react-calendar/dist/Calendar.css';
 
 import { Link } from "react-router-dom";
@@ -18,20 +18,29 @@ import User2 from '../../images/user2.png'
 import User3 from '../../images/user3.png'
 
 const state = {
-    height: 20,
     datasets: [
         {
             label: 'Rainfall',
             backgroundColor: ['#1DE9B6', '#979797'],
             borderColor: '@fff',
             borderWidth: 0,
-            size: 1,
 
             data: [75, 25]
         }
     ]
 }
-
+const state2 = {
+    labels: ['Sport', 'Music', 'Travel', 'News'],
+    datasets: [
+        {
+            label: 'Rainfall',
+            backgroundColor: ['#1DC4E9', '#899ED4', '#00A2FF', '#F48F36'],
+            borderColor: 'rgba(0,0,0,1)',
+            borderWidth: 0,
+            data: [65, 59, 80, 81]
+        }
+    ]
+}
 function Main() {
     return (
         <div className="main">
@@ -238,7 +247,7 @@ function Main() {
                                     <div className="item-5-notif-item">
                                         <div className="item-5-notif-circle">
 
-                                        <div className="circle circle-c-1"></div>
+                                            <div className="circle circle-c-1"></div>
                                         </div>
                                         <div className="item-5-notif-img">
                                             <img src={User1} />
@@ -258,7 +267,7 @@ function Main() {
                                     <div className="item-5-notif-item">
                                         <div className="item-5-notif-circle">
 
-                                        <div className="circle circle-c-2"></div>
+                                            <div className="circle circle-c-2"></div>
                                         </div>
                                         <div className="item-5-notif-img">
                                             <img src={User1} />
@@ -278,7 +287,7 @@ function Main() {
                                     <div className="item-5-notif-item">
                                         <div className="item-5-notif-circle">
 
-                                        <div className="circle circle-c-3"></div>
+                                            <div className="circle circle-c-3"></div>
                                         </div>
                                         <div className="item-5-notif-img">
                                             <img src={User1} />
@@ -297,8 +306,98 @@ function Main() {
 
                             </div>
 
-                            <div className="row menu-item">
-                                <p>1</p>
+                            <div className="row menu-item item-6">
+                                <div className="item-header">
+                                    <p className="item-titlle" >News Statistics</p>
+                                    <a className="item-icon" href="/">
+                                        <img src={More} />
+                                    </a>
+
+
+                                </div>
+                                <div className=" chart">
+                                    <Bar
+                                        data={state2}
+                                        options={{
+                                            cutout: 10,
+                                            title: {
+                                                display: true,
+                                                text: 'Average Rainfall per month',
+                                                fontSize: 20
+                                            },
+                                            legend: {
+                                                display: true,
+                                                position: 'right'
+                                            },
+                                            scales: {
+                                                xAxes: [{
+                                                    gridLines: {
+                                                        color: "rgba(0, 0, 0, 0)",
+                                                    }
+                                                }],
+                                                yAxes: [{
+                                                    gridLines: {
+                                                        color: "rgba(0, 0, 0, 0)",
+                                                    }
+                                                }]
+                                            }
+                                        }}
+                                    />
+                                </div>
+                                <div className="chartinfo">
+                                    <div className="chartinfo-item">
+                                        <div className="chartinfo-circles">
+
+                                            <div className="chartinfo-circle circle circle-c-1-1"></div>
+                                        </div>
+                                        <div className="chartinfo-text1">
+                                            <p>46</p>
+                                        </div>
+                                        <div className="chartinfo-text2">
+                                            <p>sport</p>
+                                        </div>
+                                    </div>
+                                    <div className="chartinfo-item">
+                                        <div className="chartinfo-circles">
+
+                                            <div className="chartinfo-circle circle circle-c-1-2"></div>
+                                        </div>
+                                        <div className="chartinfo-text1">
+                                            <p>46</p>
+                                        </div>
+                                        <div className="chartinfo-text2">
+                                            <p>sport</p>
+                                        </div>
+                                    </div>
+                                    <div className="chartinfo-item">
+                                        <div className="chartinfo-circles">
+
+                                            <div className="chartinfo-circle circle circle-c-1-3"></div>
+                                        </div>
+                                        <div className="chartinfo-text1">
+                                            <p>46</p>
+                                        </div>
+                                        <div className="chartinfo-text2">
+                                            <p>sport</p>
+                                        </div>
+                                    </div>
+                                    <div className="chartinfo-item">
+                                        <div className="chartinfo-circles">
+
+                                            <div className="chartinfo-circle circle circle-c-1-4"></div>
+                                        </div>
+                                        <div className="chartinfo-text1">
+                                            <p>46</p>
+                                        </div>
+                                        <div className="chartinfo-text2">
+                                            <p>sport</p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
                             </div>
 
                         </div>

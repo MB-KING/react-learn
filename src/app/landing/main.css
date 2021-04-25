@@ -140,7 +140,7 @@ a {
 /*start side menu */
 .sidemenu {
     background-color: #1de9b6;
-    height: 800px;
+    height: 1050px;
 }
 .sidemenuitem {
     margin: 20px;
@@ -359,16 +359,54 @@ a {
     
 }
 
-
-
-
-
-
-
-
-
-
 /*end item5*/
+/*start item6*/
+.item-6{
+    background-color: #fff;
+    padding: 20px;
+
+}
+
+
+.chartinfo{
+    padding: 20px 0px;
+    display: table;
+    text-align: center;
+    margin: 0px auto;
+}
+.chartinfo-item{
+    display: table-cell;
+    text-align: center;
+}
+.chartinfo-circles{
+}
+.chartinfo-circle{
+    margin: 0px auto;
+
+}
+.circle-c-1-1{
+    background-color: #1DC4E9;
+}
+.circle-c-1-2{
+    background-color: #899ED4;
+}
+.circle-c-1-3{
+    background-color: #00A2FF;
+}
+.circle-c-1-4{
+    background-color: #F48F36;
+}
+.chartinfo-text1 p{
+    font-size: 26px;
+    margin: 0px;
+}
+
+.chartinfo-text2 p{
+    font-size: 12px;
+    margin: 0px;
+
+}
+/*end item6*/
 
 
 /*end menu*/
