@@ -241,14 +241,35 @@ a{
     padding: 20px 0px;
 }
 
-
+.item-imgs{
+    display: table;
+    max-width: 250px;
+}
+.item-img{
+    display: table-cell;
+    padding: 0px;
+}
+.item-img img{
+    width: 39px;
+    height: 39px;
+}
 
 
 /*end item2*/
 
+/*start item-3*/
+.item-3{
+    background-color: #fff;
+    padding: 20px;
 
+}
+.react-calendar{
+    font-family: 'Open Sans', sans-serif !important;
+    border: none;
+    width: 500px;
+}
 
-
+/*end item-3*/
 
 
 

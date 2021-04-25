@@ -1,8 +1,9 @@
 import React from "react";
 import { Doughnut } from 'react-chartjs-2';
+import 'react-calendar/dist/Calendar.css';
 
 import { Link } from "react-router-dom";
-
+import Calendar from 'react-calendar'
 import './main.css'
 import DocumentIcon from '../../images/Document-Icon.png'
 import CloudIcon from '../../images/Cloud-Icon.png'
@@ -12,6 +13,9 @@ import AddIcon from '../../images/Add-Icon.png'
 import Settings from '../../images/Settings-Icon.png'
 import Email from '../../images/Email-Icons.png'
 import More from '../../images/More-Icon.png'
+import User1 from '../../images/user1.png'
+import User2 from '../../images/user2.png'
+import User3 from '../../images/user3.png'
 
 const state = {
     height: 20,
@@ -124,7 +128,7 @@ function Main() {
                                 <div className="item-header">
                                     <p className="item-titlle" >Activity</p>
                                     <a className="item-icon" href="/">
-                                        <img src={More}  />
+                                        <img src={More} />
                                     </a>
                                 </div>
                                 <div className=" chart">
@@ -156,22 +160,44 @@ function Main() {
                                 </div>
                             </div>
                             <div className="row menu-item item-2">
-                            <div className="item-header">
-                                    <p className="item-titlle"  id="w-color" >Project Design Sprint</p>
+                                <div className="item-header">
+                                    <p className="item-titlle" id="w-color" >Project Design Sprint</p>
                                     <a className="item-icon" href="/">
-                                        <img src={More}  />
+                                        <img src={More} />
                                     </a>
 
                                 </div>
-                                    <p className=""  id="w-color">11 MAY 10:35</p>
-                                    <p className="item-p" id="w-color">
+                                <p className="" id="w-color">11 MAY 10:35</p>
+                                <p className="item-p" id="w-color">
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                                     </p>
+                                <div className="item-imgs">
+                                    <div className="sidebaritem c5">
+                                        <a href="/">
+                                            <img src={AddIcon} alt="1" />
+                                        </a>
+                                    </div>
+
+                                    <a href="/" className="item-img">
+                                        <img src={User1} alt="" />
+
+                                    </a>
+                                    <a href="/" className="item-img">
+                                        <img src={User2} alt="" />
+
+                                    </a>
+                                    <a href="/" className="item-img">
+                                        <img src={User3} alt="" />
+
+                                    </a>
+                                    <p id="w-color">+63</p>
+                                </div>
+
 
                             </div>
 
-                            <div className="row menu-item">
-                                <p>1</p>
+                            <div className="row menu-item item-3">
+                            <Calendar />
                             </div>
 
                         </div>
