@@ -14,6 +14,7 @@ import Email from '../../images/Email-Icons.png'
 import More from '../../images/More-Icon.png'
 
 const state = {
+    height: 20,
     datasets: [
         {
             label: 'Rainfall',
@@ -119,71 +120,70 @@ function Main() {
 
 
                         <div className="col-5 menu-col">
-                            <div className="row item1">
-                                <div className="col">
-                                    <div className="row item-titlle">
-                                        <div className="row">
+                            <div className="row menu-item item-1">
+                                <div className="item-header">
+                                    <p className="item-titlle" >Activity</p>
+                                    <a className="item-icon" href="/">
+                                        <img src={More}  />
+                                    </a>
+                                </div>
+                                <div className=" chart">
+                                    <Doughnut
+                                        data={state}
+                                        height={150}
+                                        width={150}
 
-                                            <p className="col-11">Activity</p>
-                                            <a className="col-1 item-icon" href="/">
-                                                <img src={More} alt="" />
-                                            </a>
-                                        </div>
-                                        <div className="row">
+                                        options={{
+                                            maintainAspectRatio: false,
+                                            cutout: 65,
+                                        }}
+                                    />
+                                </div>
+                                <div className="text-items">
 
-                                            <div className="chart">
-                                                <Doughnut
-                                                    data={state}
-                                                    options={{
-                                                        cutoutpercentage: 10,
-                                                        title: {
-                                                            display: true,
-                                                            text: 'Average Rainfall per month',
-                                                            fontSize: 20
-                                                        },
-                                                        legend: {
-                                                            display: true,
-                                                            position: 'right'
-                                                        }
-                                                    }}
-                                                />
-
-                                            </div>
-                                        </div>
-
-                                        <p>1</p>
+                                    <div className="item-text">
+                                        <p >MAX</p>
+                                        <p>9.376</p>
+                                        <p>Steps</p>
                                     </div>
-                                    <div className="row">
-
+                                    <div className="item-text">
+                                        <p >MAX</p>
+                                        <p>9.376</p>
+                                        <p>Steps</p>
                                     </div>
-                                    <div className="row">
-                                        <div className="col6">
 
-                                        </div>
-                                        <div className="col6">
 
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
-                            <div className="row item1">
-                                <p>1</p>
+                            <div className="row menu-item item-2">
+                            <div className="item-header">
+                                    <p className="item-titlle"  id="w-color" >Project Design Sprint</p>
+                                    <a className="item-icon" href="/">
+                                        <img src={More}  />
+                                    </a>
+
+                                </div>
+                                    <p className=""  id="w-color">11 MAY 10:35</p>
+                                    <p className="item-p" id="w-color">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                    </p>
+
                             </div>
 
-                            <div className="row item1">
+                            <div className="row menu-item">
                                 <p>1</p>
                             </div>
 
                         </div>
                         <div className="col-5 menu-col">
-                            <div className="row item1">
+                            <div className="row menu-item">
                                 <p>1</p>
                             </div>
-                            <div className="row item1">
+                            <div className="row menu-item">
                                 <p>1</p>
                             </div>
 
-                            <div className="row item1">
+                            <div className="row menu-item">
                                 <p>1</p>
                             </div>
 
