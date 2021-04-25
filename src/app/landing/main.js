@@ -197,16 +197,56 @@ function Main() {
                             </div>
 
                             <div className="row menu-item item-3">
-                            <Calendar />
+                                <Calendar />
                             </div>
 
                         </div>
                         <div className="col-5 menu-col">
-                            <div className="row menu-item">
-                                <p>1</p>
+                            <div className="row menu-item item-4">
+                                <p className="item-titlle" id="text-color-gray" >ACCOUNT SETTINGS</p>
+                                <div className="item-4-input">
+                                    <p>EMAIL NOTIFICATIONS</p>
+                                    <input type="radio" ></input>
+                                    <label for="male">studio@csform.com</label>
+                                </div>
+                                <div className="item-4-input">
+
+                                    <p>SUBSCRIBE</p>
+                                    <div className="input-checkbox" >
+                                        <input type="checkbox" checked="checked"></input>
+                                        <label >Weekly Mail</label>
+                                    </div>
+                                    <div className="input-checkbox">
+                                        <input type="checkbox" ></input>
+                                        <label >Daily E-Mail</label>
+                                    </div>
+                                    <div className="input-button">
+
+                                        <button className="loginbtn-input">UPDATE</button>
+                                    </div>
+
+                                </div>
                             </div>
-                            <div className="row menu-item">
-                                <p>1</p>
+                            <div className="row menu-item item-5">
+                                <div className="item-header">
+                                    <p className="item-titlle" >Notifications</p>
+                                    <a className="item-icon" href="/">
+                                        <img src={More} />
+                                    </a>
+                                </div>
+                                <div className="item-5-notif">
+                                    <div className="item-5-notif-item">
+                                    <div className="circle circle-c-1"></div>
+                                    <div className="item-5-notif-img">
+                                    </div>    
+                                    <div className="item-5-notif-text">
+                                        <div className="item-5-notif-text1"></div>
+                                        <div className="item-5-notif-text2"></div>
+
+                                    </div>
+                                    </div>     
+                                </div>
+
                             </div>
 
                             <div className="row menu-item">
