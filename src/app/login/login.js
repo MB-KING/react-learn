@@ -1,27 +1,37 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './login.css'
 import { GoogleLogin } from "react-google-login"
 
-const responseGoogle = response => {
-    console.log(response.profileObj.name);
 
-};
+function onSignIn(googleUser) {
+    var profile = googleUser.getBasicProfile();
+    //console.log(profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log(profile.getName());
+    console.log(profile.getImageUrl());
+    //console.log(profile.getEmail()); // This is null if the 'email' scope is not present.
+}
 
-function Login() {
-    return (
-        <div className="Login">
-            <div className="login">
+class Login extends Component {
+    state = {}
+    render() {
 
-                <GoogleLogin
+        
+        return (
+            <div className="Login">
+                <div className="login-btn">
 
-                    clientId="1088057598482-fgvi82j235jmqd5ekjn9mobhnukg63ig.apps.googleusercontent.com"
-                    onSuccess={responseGoogle}
-                    onFailure={responseGoogle}
-                    profileObj={responseGoogle}
-                />
+                    <GoogleLogin
+
+                        clientId="1088057598482-fgvi82j235jmqd5ekjn9mobhnukg63ig.apps.googleusercontent.com"
+                        onSuccess={onSignIn}
+                    />
+                </div>
+                
+
             </div>
-        </div>
-    );
+
+        );
+    }
 }
 
 export default Login;

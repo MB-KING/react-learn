@@ -24,7 +24,6 @@ const state = {
             backgroundColor: ['#1DE9B6', '#979797'],
             borderColor: '@fff',
             borderWidth: 0,
-
             data: [75, 25]
         }
     ]
@@ -137,7 +136,7 @@ function Main() {
                                 <div className="item-header">
                                     <p className="item-titlle" >Activity</p>
                                     <a className="item-icon" href="/">
-                                        <img src={More} />
+                                        <img src={More} alt=""></img>
                                     </a>
                                 </div>
                                 <div className=" chart">
@@ -172,7 +171,7 @@ function Main() {
                                 <div className="item-header">
                                     <p className="item-titlle" id="w-color" >Project Design Sprint</p>
                                     <a className="item-icon" href="/">
-                                        <img src={More} />
+                                        <img src={More} alt=""/>
                                     </a>
 
                                 </div>
@@ -240,7 +239,7 @@ function Main() {
                                 <div className="item-header">
                                     <p className="item-titlle" >Notifications</p>
                                     <a className="item-icon" href="/">
-                                        <img src={More} />
+                                        <img src={More} alt=""/>
                                     </a>
                                 </div>
                                 <div className="item-5-notif">
@@ -250,7 +249,7 @@ function Main() {
                                             <div className="circle circle-c-1"></div>
                                         </div>
                                         <div className="item-5-notif-img">
-                                            <img src={User1} />
+                                            <img src={User1} alt=""/>
                                         </div>
                                         <div className="item-5-notif-text">
                                             <div className="item-5-notif-text1">
@@ -270,7 +269,7 @@ function Main() {
                                             <div className="circle circle-c-2"></div>
                                         </div>
                                         <div className="item-5-notif-img">
-                                            <img src={User1} />
+                                            <img src={User2} alt=""/>
                                         </div>
                                         <div className="item-5-notif-text">
                                             <div className="item-5-notif-text1">
@@ -290,7 +289,7 @@ function Main() {
                                             <div className="circle circle-c-3"></div>
                                         </div>
                                         <div className="item-5-notif-img">
-                                            <img src={User1} />
+                                            <img src={User3} alt=""/>
                                         </div>
                                         <div className="item-5-notif-text">
                                             <div className="item-5-notif-text1">
@@ -310,7 +309,7 @@ function Main() {
                                 <div className="item-header">
                                     <p className="item-titlle" >News Statistics</p>
                                     <a className="item-icon" href="/">
-                                        <img src={More} />
+                                        <img src={More} alt=""/>
                                     </a>
 
 
