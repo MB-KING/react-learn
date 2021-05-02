@@ -3,19 +3,19 @@ import './login.css'
 import { GoogleLogin } from "react-google-login"
 
 
-function onSignIn(googleUser) {
+function onSignIn (googleUser) {
     var profile = googleUser.getBasicProfile();
-    //console.log(profile.getId()); // Do not send to your backend! Use an ID token instead.
     console.log(profile.getName());
     console.log(profile.getImageUrl());
-    //console.log(profile.getEmail()); // This is null if the 'email' scope is not present.
+    document.getElementById("googleusername").innerHTML = profile.getName();
+    document.getElementById("googleprofilepic").src = profile.getImageUrl();
+
 }
 
 class Login extends Component {
-    state = {}
+
     render() {
 
-        
         return (
             <div className="Login">
                 <div className="login-btn">
@@ -26,8 +26,8 @@ class Login extends Component {
                         onSuccess={onSignIn}
                     />
                 </div>
-                
-
+                <p id="googleusername"> hi </p>
+                <img id="googleprofilepic" alt=""/>
             </div>
 
         );

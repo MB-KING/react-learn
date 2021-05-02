@@ -1,8 +1,11 @@
 import React from "react";
 import { Doughnut, Bar } from 'react-chartjs-2';
 import 'react-calendar/dist/Calendar.css';
+import { GoogleLogin } from "react-google-login"
 
-import { Link } from "react-router-dom";
+
+
+//import { Link } from "react-router-dom";
 import Calendar from 'react-calendar'
 import './main.css'
 import DocumentIcon from '../../images/Document-Icon.png'
@@ -16,6 +19,15 @@ import More from '../../images/More-Icon.png'
 import User1 from '../../images/user1.png'
 import User2 from '../../images/user2.png'
 import User3 from '../../images/user3.png'
+
+function onSignIn(googleUser) {
+    var profile = googleUser.getBasicProfile();
+    //console.log(profile.getName());
+    //console.log(profile.getImageUrl());
+    document.getElementById("googleusername").innerHTML = profile.getName();
+    document.getElementById("googleprofilepic").src = profile.getImageUrl();
+
+}
 
 const state = {
     datasets: [
@@ -57,11 +69,24 @@ function Main() {
                     </ul>
                 </div>
                 <div className="col-2 login">
+                    <div className="google-login">
+
+                        {/*
                     <Link to="/Login">
-                        <button className="loginbtn">
-                            login
+                    <button className="loginbtn">
+                    login
                     </button>
                     </Link>
+                    */}
+                        
+                        <img className="googleprofilepic" id="googleprofilepic" alt="/" />
+                        <p className="googleusername" id="googleusername">
+                            <GoogleLogin
+                                clientId="1088057598482-fgvi82j235jmqd5ekjn9mobhnukg63ig.apps.googleusercontent.com"
+                                onSuccess={onSignIn}
+                            />
+                        </p>
+                    </div>
                 </div>
             </div>
             <div className="row main-menu">
@@ -171,7 +196,7 @@ function Main() {
                                 <div className="item-header">
                                     <p className="item-titlle" id="w-color" >Project Design Sprint</p>
                                     <a className="item-icon" href="/">
-                                        <img src={More} alt=""/>
+                                        <img src={More} alt="" />
                                     </a>
 
                                 </div>
@@ -239,7 +264,7 @@ function Main() {
                                 <div className="item-header">
                                     <p className="item-titlle" >Notifications</p>
                                     <a className="item-icon" href="/">
-                                        <img src={More} alt=""/>
+                                        <img src={More} alt="" />
                                     </a>
                                 </div>
                                 <div className="item-5-notif">
@@ -249,7 +274,7 @@ function Main() {
                                             <div className="circle circle-c-1"></div>
                                         </div>
                                         <div className="item-5-notif-img">
-                                            <img src={User1} alt=""/>
+                                            <img src={User1} alt="" />
                                         </div>
                                         <div className="item-5-notif-text">
                                             <div className="item-5-notif-text1">
@@ -269,7 +294,7 @@ function Main() {
                                             <div className="circle circle-c-2"></div>
                                         </div>
                                         <div className="item-5-notif-img">
-                                            <img src={User2} alt=""/>
+                                            <img src={User2} alt="" />
                                         </div>
                                         <div className="item-5-notif-text">
                                             <div className="item-5-notif-text1">
@@ -289,7 +314,7 @@ function Main() {
                                             <div className="circle circle-c-3"></div>
                                         </div>
                                         <div className="item-5-notif-img">
-                                            <img src={User3} alt=""/>
+                                            <img src={User3} alt="" />
                                         </div>
                                         <div className="item-5-notif-text">
                                             <div className="item-5-notif-text1">
@@ -309,7 +334,7 @@ function Main() {
                                 <div className="item-header">
                                     <p className="item-titlle" >News Statistics</p>
                                     <a className="item-icon" href="/">
-                                        <img src={More} alt=""/>
+                                        <img src={More} alt="" />
                                     </a>
 
 

@@ -99,6 +99,35 @@ a {
     vertical-align: middle;
 }
 /*end header*/
+ 
+
+/* google login */
+.google-login{
+    display: table;
+}
+.googleprofilepic{
+    display: table-cell;
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    vertical-align: middle;
+}
+.googleusername{
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0px 10px;
+    border: 0px;
+    font-weight: bold;
+}
+
+
+
+/* end google login */
+
+
+
+
+
 
 /*start side bar */
 .sidebar {
