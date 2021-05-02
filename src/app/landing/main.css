@@ -106,11 +106,12 @@ a {
     display: table;
 }
 .googleprofilepic{
-    display: table-cell;
+    display: none;
     border-radius: 50px;
     height: 40px;
     width: 40px;
     vertical-align: middle;
+
 }
 .googleusername{
     display: table-cell;

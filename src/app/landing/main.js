@@ -25,6 +25,7 @@ function onSignIn(googleUser) {
     //console.log(profile.getName());
     //console.log(profile.getImageUrl());
     document.getElementById("googleusername").innerHTML = profile.getName();
+    document.getElementById("googleprofilepic").style.display = 'table-cell';
     document.getElementById("googleprofilepic").src = profile.getImageUrl();
 
 }
@@ -84,6 +85,7 @@ function Main() {
                             <GoogleLogin
                                 clientId="1088057598482-fgvi82j235jmqd5ekjn9mobhnukg63ig.apps.googleusercontent.com"
                                 onSuccess={onSignIn}
+                                buttonText="google login"
                             />
                         </p>
                     </div>
