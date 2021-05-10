@@ -35,31 +35,23 @@ function onSignIn(googleUser) {
             document.getElementById("googleprofilepic").style.display = 'table-cell',
             document.getElementById("googleprofilepic").src = profile.getImageUrl(),
             alertify.alert('login successfully', 'welcome ' + profile.getName(), function () {
-                alertify.success('Ok');
+                alertify.success('welcome ' + profile.getName());
             })
         )
-    } else {
-        return (
-
-            alertify.alert('login faild', 'please try again ! ', function () {
-                alertify.success('Ok');
-            })
-
-        )
-    }
-
+    } 
 }
 
 function onNotSignIn(googleUser) {
     var profile = googleUser.getBasicProfile();
     //console.log(profile.getName());
     //console.log(profile.getImageUrl());
-    console.log(googleUser);
+    console.log(googleUser.error);
     if (googleUser === googleUser) {
         return (
 
             alertify.alert('login faild', 'please try again ! ', function () {
-                alertify.success('Ok');
+                alertify.success('try again');
+
             })
 
         )
