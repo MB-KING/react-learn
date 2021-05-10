@@ -3,6 +3,9 @@ import { Doughnut, Bar } from 'react-chartjs-2';
 import 'react-calendar/dist/Calendar.css';
 import { GoogleLogin } from "react-google-login"
 
+import alertify from 'alertifyjs';
+import 'alertifyjs/build/css/alertify.css';
+
 
 
 //import { Link } from "react-router-dom";
@@ -24,11 +27,45 @@ function onSignIn(googleUser) {
     var profile = googleUser.getBasicProfile();
     //console.log(profile.getName());
     //console.log(profile.getImageUrl());
-    document.getElementById("googleusername").innerHTML = profile.getName();
-    document.getElementById("googleprofilepic").style.display = 'table-cell';
-    document.getElementById("googleprofilepic").src = profile.getImageUrl();
+    console.log(googleUser);
+    if (googleUser === googleUser) {
+        return (
+
+            document.getElementById("googleusername").innerHTML = profile.getName(),
+            document.getElementById("googleprofilepic").style.display = 'table-cell',
+            document.getElementById("googleprofilepic").src = profile.getImageUrl(),
+            alertify.alert('login successfully', 'welcome ' + profile.getName(), function () {
+                alertify.success('Ok');
+            })
+        )
+    } else {
+        return (
+
+            alertify.alert('login faild', 'please try again ! ', function () {
+                alertify.success('Ok');
+            })
+
+        )
+    }
 
 }
+
+function onNotSignIn(googleUser) {
+    var profile = googleUser.getBasicProfile();
+    //console.log(profile.getName());
+    //console.log(profile.getImageUrl());
+    console.log(googleUser);
+    if (googleUser === googleUser) {
+        return (
+
+            alertify.alert('login faild', 'please try again ! ', function () {
+                alertify.success('Ok');
+            })
+
+        )
+    }
+}
+
 
 const state = {
     datasets: [
@@ -79,12 +116,13 @@ function Main() {
                     </button>
                     </Link>
                     */}
-                        
+
                         <img className="googleprofilepic" id="googleprofilepic" alt="/" />
                         <p className="googleusername" id="googleusername">
                             <GoogleLogin
                                 clientId="1088057598482-fgvi82j235jmqd5ekjn9mobhnukg63ig.apps.googleusercontent.com"
                                 onSuccess={onSignIn}
+                                onFailure={onNotSignIn}
                                 buttonText="google login"
                             />
                         </p>
@@ -342,6 +380,7 @@ function Main() {
 
                                 </div>
                                 <div className=" chart">
+
                                     <Bar
                                         data={state2}
                                         options={{
